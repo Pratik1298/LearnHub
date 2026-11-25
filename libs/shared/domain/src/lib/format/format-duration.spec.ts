@@ -20,4 +20,7 @@ describe('formatDuration', () => {
   it('rejects negative durations', () => {
     expect(() => formatDuration(-5)).toThrow('Duration cannot be negative');
   });
+  it('shows exactly one hour', () => {
+    expect(formatDuration(60)).toBe('1h');
+  });
 });
